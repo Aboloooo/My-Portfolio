@@ -22,7 +22,7 @@ window.CONTENT = {
     intro:
       "Hi, I'm Abolfazle, a cybersecurity student building skills in defence, ethical hacking, and secure thinking.",
     bio: [
-      "I'm a cybersecurity student who learns best by seeing things work. I like to ask four questions about every topic: what is it, why does it matter, where is it used in the real world, and how can I use it?",
+      "I'm a cybersecurity student who learns best by seeing things work. I like to ask four questions about every topic: what is it, how does it work, where is it used, and how can I use it?",
       "I enjoy practising in safe lab environments, breaking things on purpose, and then explaining the lesson in simple words.",
     ],
     status: "Open to internships",
@@ -39,7 +39,7 @@ window.CONTENT = {
       use: "Capturing packets with Wireshark in my home lab.",
     },
     {
-      title: "Ethical hacking and pen testing",
+      title: "Ethical hacking and pentesting",
       what: "Testing a system, with permission, using the same tricks real attackers use.",
       why: "It's cheaper to find a hole yourself than to learn about it from a breach.",
       real: "A bank hires testers to try to get into its app before customers are affected.",
@@ -137,20 +137,20 @@ window.CONTENT = {
 
   journey: [
     {
-      when: "2024",
-      title: "Started my cybersecurity degree",
-      text: "Began with networks, operating systems, and programming.",
+      when: "2021",
+      title: "Started my information technician diploma",
+      text: "Began with networks, operating systems, databases and programming.",
     },
     {
       when: "2025",
-      title: "CompTIA Security+ (in progress)",
-      text: "Studying core security concepts used across the industry.",
+      title: "BTS Cybersecurity degree",
+      text: "Studying core security concepts with practical labs",
     },
-    {
+    /* {
       when: "2025",
       title: "First CTF competition",
       text: "Solved beginner challenges in web and cryptography with a team.",
-    },
+    }, */
     {
       when: "Next",
       title: "Internship and SOC analyst path",
@@ -162,9 +162,9 @@ window.CONTENT = {
     text: "I'm looking for internships, mentors, and study partners. Say hello.",
     // Buttons with an empty url are hidden automatically.
     links: [
-      { label: "Email me", url: "mailto:you@example.com" },
-      { label: "GitHub", url: "https://github.com/" },
-      { label: "LinkedIn", url: "https://www.linkedin.com/" },
+      { label: "Email me", url: "mailto:AhmAb795@school.lu"},
+      { label: "GitHub", url: "https://github.com/Aboloooo" },
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/abolfazle-ahmadi-7bb326440" },
     ],
   },
 };
