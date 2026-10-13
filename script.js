@@ -142,6 +142,13 @@
         esc(j.title) +
         "</h3><p>" +
         esc(j.text) +
+        (j.link
+          ? '<a href="' +
+            j.link.href +
+            '" target="_blank" rel="noreferrer">' +
+            esc(j.link.label) +
+            "</a>"
+          : "") +
         "</p></li>"
       );
     })

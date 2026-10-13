@@ -140,12 +140,14 @@ window.CONTENT = {
     {
       when: "2021",
       title: "Started my information technician diploma",
-      text: "Began with networks, operating systems, databases and programming.",
+      text: "Began with networks, operating systems, databases and programming in ",
+      link: { href: "https://lpem.lu/", label: "LPEM" },
     },
     {
       when: "2025",
       title: "BTS Cybersecurity degree",
-      text: "Studying core security concepts with practical labs",
+      text: "Studying core security concepts with practical labs in ",
+      link: { href: "https://www.lgk.lu/", label: "LGK" },
     },
     /* {
       when: "2025",
@@ -163,9 +165,12 @@ window.CONTENT = {
     text: "I'm looking for internships, mentors, and study partners. Say hello.",
     // Buttons with an empty url are hidden automatically.
     links: [
-      { label: "Email me", url: "mailto:AhmAb795@school.lu"},
+      { label: "Email me", url: "mailto:AhmAb795@school.lu" },
       { label: "GitHub", url: "https://github.com/Aboloooo" },
-      { label: "LinkedIn", url: "https://www.linkedin.com/in/abolfazle-ahmadi-7bb326440" },
+      {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/abolfazle-ahmadi-7bb326440",
+      },
     ],
   },
 };
