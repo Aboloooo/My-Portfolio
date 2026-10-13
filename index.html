@@ -1,105 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav aria-label="Main">
+      <div class="wrap">
+        <b id="navName"></b>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme" type="button" aria-label="Toggle dark mode">
+          Theme
+        </button>
+      </div>
+    </nav>
 
-<nav aria-label="Main">
-  <div class="wrap">
-    <b id="navName"></b>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#journey">Journey</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button id="theme" type="button" aria-label="Toggle dark mode">Theme</button>
-  </div>
-</nav>
+    <main class="wrap">
+      <header class="hero" id="top">
+        <h1 class="reveal" id="headline"></h1>
+        <p class="reveal" id="intro"></p>
+        <div class="cipher reveal">
+          <label for="msg"
+            >Try it: type a message and watch it get encrypted (Caesar
+            cipher)</label
+          >
+          <input
+            id="msg"
+            type="text"
+            value="Hello, hacker"
+            maxlength="40"
+            autocomplete="off"
+          />
+          <output id="out" aria-live="polite"></output>
+          <div class="shift">
+            <label for="shift">Shift key: <b id="sv">3</b></label
+            ><input id="shift" type="range" min="1" max="25" value="3" />
+          </div>
+          <small
+            >Each letter moves forward by the key. Without the key, the message
+            looks like noise. Real encryption (like AES) follows the same idea,
+            but with far stronger math.</small
+          >
+        </div>
+      </header>
 
-<main class="wrap">
+      <section id="about">
+        <h2 class="reveal">About me</h2>
+        <div class="about">
+          <div class="reveal" id="bio"></div>
+          <div class="side">
+            <figure class="photo reveal" id="photoBox"></figure>
+            <div class="meta reveal">
+              <span class="pill"
+                ><span class="dot"></span><span id="status"></span
+              ></span>
+              <span class="loc"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"
+                  />
+                  <circle cx="12" cy="10" r="2.5" /></svg
+                ><span id="city"></span
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<header class="hero" id="top">
-  <h1 class="reveal" id="headline"></h1>
-  <p class="reveal" id="intro"></p>
-  <div class="cipher reveal">
-    <label for="msg">Try it: type a message and watch it get encrypted (Caesar cipher)</label>
-    <input id="msg" type="text" value="Hello, hacker" maxlength="40" autocomplete="off">
-    <output id="out" aria-live="polite"></output>
-    <div class="shift"><label for="shift">Shift key: <b id="sv">3</b></label><input id="shift" type="range" min="1" max="25" value="3"></div>
-    <small>Each letter moves forward by the key. Without the key, the message looks like noise. Real encryption (like AES) follows the same idea, but with far stronger math.</small>
-  </div>
-</header>
+      <section id="skills">
+        <h2 class="reveal">What I'm learning</h2>
+        <p class="lead reveal">
+          Tap a topic to see it explained simply: what it is, why it matters,
+          and where it shows up in real life.
+        </p>
+        <div id="skillList"></div>
+      </section>
 
-<section id="about">
-  <h2 class="reveal">About me</h2>
-  <div class="about">
-    <div class="reveal" id="bio"></div>
-    <div class="side">
-      <figure class="photo reveal" id="photoBox"></figure>
-      <div class="meta reveal">
-        <span class="pill"><span class="dot"></span><span id="status"></span></span>
-        <span class="loc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span id="city"></span></span>
+      <section id="projects">
+        <h2 class="reveal">Projects</h2>
+        <p class="lead reveal">Click a project to open it.</p>
+        <div class="projects" id="projectList"></div>
+      </section>
+
+      <section id="certificates">
+        <h2 class="reveal">Certificates</h2>
+        <p class="lead reveal">
+          Proof of what I've learned, with verification links where available.
+        </p>
+        <div class="certs" id="certList"></div>
+      </section>
+
+      <section id="journey">
+        <h2 class="reveal">My journey</h2>
+        <p class="lead reveal">
+          Courses, certifications, and milestones, in the order they happened.
+        </p>
+        <ol class="timeline" id="journeyList"></ol>
+      </section>
+
+      <section id="contact">
+        <div class="contact reveal">
+          <h2>Let's connect</h2>
+          <p id="contactText"></p>
+          <div id="contactBtns"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        © <span id="yr"></span> <span id="footName"></span>. Built with HTML,
+        CSS and JavaScript. This site uses privacy-friendly analytics that count
+        visits without cookies or personal data.
+      </div>
+    </footer>
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lbTitle"
+      aria-hidden="true"
+    >
+      <div class="lb-panel">
+        <button
+          class="lb-close"
+          id="lbClose"
+          type="button"
+          aria-label="Close certificate"
+        >
+          &times;
+        </button>
+        <div class="lb-media" id="lbMedia"></div>
+        <div class="lb-info">
+          <h3 id="lbTitle"></h3>
+          <p id="lbMeta"></p>
+          <div class="lb-actions" id="lbActions"></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<section id="skills">
-  <h2 class="reveal">What I'm learning</h2>
-  <p class="lead reveal">Tap a topic to see it explained simply: what it is, why it matters, and where it shows up in real life.</p>
-  <div id="skillList"></div>
-</section>
-
-<section id="projects">
-  <h2 class="reveal">Projects</h2>
-  <p class="lead reveal">Click a project to open it.</p>
-  <div class="projects" id="projectList"></div>
-</section>
-
-<section id="certificates">
-  <h2 class="reveal">Certificates</h2>
-  <p class="lead reveal">Proof of what I've learned, with verification links where available.</p>
-  <div class="certs" id="certList"></div>
-</section>
-
-<section id="journey">
-  <h2 class="reveal">My journey</h2>
-  <p class="lead reveal">Courses, certifications, and milestones, in the order they happened.</p>
-  <ol class="timeline" id="journeyList"></ol>
-</section>
-
-<section id="contact">
-  <div class="contact reveal">
-    <h2>Let's connect</h2>
-    <p id="contactText"></p>
-    <div id="contactBtns"></div>
-  </div>
-</section>
-
-</main>
-<footer><div class="wrap">© <span id="yr"></span> <span id="footName"></span>. Built with HTML, CSS and JavaScript.</div></footer>
-
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbTitle" aria-hidden="true">
-  <div class="lb-panel">
-    <button class="lb-close" id="lbClose" type="button" aria-label="Close certificate">&times;</button>
-    <div class="lb-media" id="lbMedia"></div>
-    <div class="lb-info"><h3 id="lbTitle"></h3><p id="lbMeta"></p><div class="lb-actions" id="lbActions"></div></div>
-  </div>
-</div>
-
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="content.js"></script>
-<script src="script.js"></script>
-<script data-goatcounter="https://abolcyberday.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-</body>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="content.js"></script>
+    <script src="script.js"></script>
+    <script data-goatcounter="https://abolcyberday.goatcounter.com/count" async src="https://gc.zgo.at/count.js"
+    ></script>
+  </body>
 </html>
